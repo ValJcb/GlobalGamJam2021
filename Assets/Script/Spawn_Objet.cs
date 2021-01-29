@@ -5,11 +5,15 @@ using UnityEngine;
 public class Spawn_Objet : MonoBehaviour
 {
     public GameObject[] objets;
+    //public Sprite[] Sprite_Images;
+    //private int rand;
     public Transform spawner;
     public float spawnRate = 1;
     // Start is called before the first frame update
     void Start()
     {
+        //rand = Random.Range(0, Sprite_Images.Length);
+        //GetComponent<SpriteRenderer>().sprite = Sprite_Images[rand];
         InvokeRepeating("SpawnMethod", 1.0f, spawnRate);
     }
 
