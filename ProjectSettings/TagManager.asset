@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Client
   - Item
+  - Box
+  - Item_box
   layers:
   - Default
   - TransparentFX

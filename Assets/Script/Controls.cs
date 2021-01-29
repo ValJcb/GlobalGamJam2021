@@ -4,20 +4,31 @@ using UnityEngine;
 
 public class Controls : MonoBehaviour
 {
-    private bool isDragging;
+    public bool isDragging;
     public Rigidbody2D rb;
 
     public void OnMouseDown()
     {
         isDragging = true;
+        this.gameObject.tag = "Item";
+
     }
 
     public void OnMouseUp()
     {
         isDragging = false;
+        StartCoroutine(ChangeTag());
+    }
+    IEnumerator ChangeTag()
+    {
+        yield return new WaitForSeconds(3f);
+        if (isDragging == false) {
+            this.gameObject.tag = "Item_box";
+        }
     }
 
-    void FixedUpdate()
+
+        void FixedUpdate()
     {
         if (isDragging)
         {
