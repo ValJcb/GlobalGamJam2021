@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Client_rond
       objectReference: {fileID: 0}
+    - target: {fileID: 4805811646093157743, guid: b567846890c8c4f83b4bb5239afc1293, type: 3}
+      propertyPath: m_TagString
+      value: Client
+      objectReference: {fileID: 0}
     - target: {fileID: 7074467578232075760, guid: b567846890c8c4f83b4bb5239afc1293, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -538,6 +542,10 @@ PrefabInstance:
     - target: {fileID: 4805811646093157743, guid: b567846890c8c4f83b4bb5239afc1293, type: 3}
       propertyPath: m_Name
       value: Client_triangle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805811646093157743, guid: b567846890c8c4f83b4bb5239afc1293, type: 3}
+      propertyPath: m_TagString
+      value: Client
       objectReference: {fileID: 0}
     - target: {fileID: 7074467578232075760, guid: b567846890c8c4f83b4bb5239afc1293, type: 3}
       propertyPath: m_Sprite
@@ -914,6 +922,10 @@ PrefabInstance:
     - target: {fileID: 4805811646093157743, guid: b567846890c8c4f83b4bb5239afc1293, type: 3}
       propertyPath: m_Name
       value: "Client_carr\xE9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805811646093157743, guid: b567846890c8c4f83b4bb5239afc1293, type: 3}
+      propertyPath: m_TagString
+      value: Client
       objectReference: {fileID: 0}
     - target: {fileID: 7074467578232075760, guid: b567846890c8c4f83b4bb5239afc1293, type: 3}
       propertyPath: m_Sprite
