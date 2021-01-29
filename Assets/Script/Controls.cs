@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class dragdrop : MonoBehaviour
+public class Controls : MonoBehaviour
 {
     private bool isDragging;
+    public Rigidbody2D rb;
 
     public void OnMouseDown()
     {
@@ -20,8 +21,7 @@ public class dragdrop : MonoBehaviour
     {
         if (isDragging)
         {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            transform.Translate(mousePosition);
+            rb.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
         }
     }
 }
