@@ -5,11 +5,10 @@ using UnityEngine;
 public class RadomizerSprite : MonoBehaviour
 
 {
-    public Sprite[] sprites;
-
     // Start is called before the first frame update
     void Start()
     {
+        Sprite[] sprites = Resources.LoadAll<Sprite>("Objets") as Sprite[];
         int rand = Random.Range(0, sprites.Length);
         SpriteRenderer spriteR = GetComponent<SpriteRenderer>();
         spriteR.sprite = sprites[rand];
