@@ -11,9 +11,24 @@ public class ValidationClient : MonoBehaviour
     {
         if (collision.gameObject.tag == "Item")
         {
-            Destroy(collision.gameObject);
-            //Destroy(this.gameObject);
-            rb.velocity = new Vector2(-2, 0);
+            SpriteRenderer spriteR = GetComponent<SpriteRenderer>();
+            string clientWant = spriteR.sprite.name;
+
+            SpriteRenderer spriteRItem = collision.gameObject.GetComponent<SpriteRenderer>();
+            string itemName = spriteRItem.sprite.name;
+
+            Debug.Log(clientWant + "    " + itemName);
+
+            if (clientWant == itemName)
+            {
+                Destroy(collision.gameObject);
+                //Destroy(this.gameObject);
+                rb.velocity = new Vector2(-2, 0);
+            }
+            else
+            {
+                //Actions si c'est pas le bon
+            }
         }
     }
 
