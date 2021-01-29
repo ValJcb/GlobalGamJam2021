@@ -16,4 +16,9 @@ public class ValidationClient : MonoBehaviour
             rb.velocity = new Vector2(-2, 0);
         }
     }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(this.gameObject);
+    }
 }
