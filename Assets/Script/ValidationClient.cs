@@ -10,7 +10,6 @@ public class ValidationClient : MonoBehaviour
         { 
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
-           
         }
     }
 }
