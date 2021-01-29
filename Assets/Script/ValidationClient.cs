@@ -20,5 +20,6 @@ public class ValidationClient : MonoBehaviour
     private void OnBecameInvisible()
     {
         Destroy(this.gameObject);
+        Debug.Log("Ciao");
     }
 }
