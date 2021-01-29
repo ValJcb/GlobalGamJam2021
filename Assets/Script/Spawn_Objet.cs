@@ -10,7 +10,6 @@ public class Spawn_Objet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("ffef");
         InvokeRepeating("SpawnMethod", 1.0f, spawnRate);
     }
 

@@ -6,10 +6,11 @@ public class ValidationClient : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (gameObject.CompareTag("Item"))
-        {
-            Destroy(this.gameObject);
+        if (collision.gameObject.tag == "Item")
+        { 
             Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+           
         }
     }
 }
