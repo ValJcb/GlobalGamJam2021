@@ -354,6 +354,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objets:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawner: {fileID: 792728247}
   spawnRate: 1
 --- !u!4 &792728247
@@ -1035,5 +1037,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab63b680997e4f3fa6bd36db12f3a6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  client: {fileID: 0}
-  objet: {fileID: 0}
