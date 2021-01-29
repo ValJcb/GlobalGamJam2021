@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ValidationClient : MonoBehaviour
 {
-    public GameObject objet;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (gameObject.CompareTag("Objet"))
