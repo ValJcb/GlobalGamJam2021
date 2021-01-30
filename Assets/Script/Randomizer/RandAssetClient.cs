@@ -13,7 +13,6 @@ public class RandAssetClient : MonoBehaviour
         int rand = Random.Range(0, spritesPeople.Length);
         SpriteRenderer spriteR = GetComponent<SpriteRenderer>();
         spriteR.sprite = spritesPeople[rand];
-        gameObject.AddComponent<PolygonCollider2D>();
     }
 
     // Update is called once per frame

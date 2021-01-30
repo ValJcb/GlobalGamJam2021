@@ -8,7 +8,7 @@ public class TriggerSol : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Item_box" | collision.gameObject.tag == "Item")
+        if (collision.gameObject.tag == "Item_box" | collision.gameObject.tag == "Item" | collision.gameObject.tag == "Item_cursed")
         {
             collision.gameObject.tag = "Item";
             collision.gameObject.transform.position = spawner.transform.position;

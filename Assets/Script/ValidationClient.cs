@@ -5,12 +5,12 @@ using UnityEngine;
 public class ValidationClient : MonoBehaviour
 {
     public GameObject objet;
-    public bool isOk = false;
-    //public bool isWrong = false;
+    public GameObject bubble;
+    public Rigidbody2D rb;
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Item")
+        if (collision.gameObject.tag == "Item" && !collision.gameObject.GetComponent<Controls>().isDragging)
         {
             SpriteRenderer spriteR = objet.GetComponent<SpriteRenderer>();
             string clientWant = spriteR.sprite.name;
@@ -20,21 +20,30 @@ public class ValidationClient : MonoBehaviour
              
             if (clientWant == itemName)
             {
-                isOk = true;
-                //Destroy(collision.gameObject);
+                Destroy(collision.gameObject);
+                Destroy(bubble);
+                Destroy(objet);
                 //Destroy(this.gameObject);
+                rb.velocity = new Vector2(-2, 0);
+                Destroy(this.gameObject.GetComponent<Collider2D>());
             }
             else
             {
+                Debug.Log(collision.gameObject.tag);
+                GameObject.Find("Timer").GetComponent<TimerController>().elapsedTime -= 10f;
+                collision.gameObject.tag = "Item_cursed";
+                GameObject.Find("Main Camera").SendMessage("DoShake");
+                Debug.Log(collision.gameObject.tag);
                 //isWrong = true;
             }
         }
     }
 
+
+
     void Update()
     {
-        if(isOk)
-        this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, new Vector3(-10, 0, 0), Time.deltaTime * 2f);
+
     }
 
     private void OnBecameInvisible()

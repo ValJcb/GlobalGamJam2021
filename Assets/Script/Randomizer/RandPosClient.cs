@@ -15,13 +15,13 @@ public class RandPosClient : MonoBehaviour
     {
 
         spawn = this.transform;
-        newPos = Spawn_Client.posClientsT[Random.Range(0, Spawn_Client.posClientsT.Length)];
+        //newPos = Spawn_Client.posClientsT[Random.Range(0, Spawn_Client.posClientsT.Length)];
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        spawn.position = Vector3.MoveTowards(spawn.position, newPos.position, Time.deltaTime * speedComing);
+        //spawn.position = Vector3.MoveTowards(spawn.position, newPos.position, Time.deltaTime * speedComing);
     }
 }

@@ -8,6 +8,8 @@ TagManager:
   - Item
   - Box
   - Item_box
+  - FinFile
+  - Item_cursed
   layers:
   - Default
   - TransparentFX
