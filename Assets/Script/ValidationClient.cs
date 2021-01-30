@@ -5,9 +5,10 @@ using UnityEngine;
 public class ValidationClient : MonoBehaviour
 {
     public GameObject objet;
-    private bool isOk = false;
+    public bool isOk = false;
+    //public bool isWrong = false;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Item")
         {
@@ -25,7 +26,7 @@ public class ValidationClient : MonoBehaviour
             }
             else
             {
-                //Actions si c'est pas le bon
+                //isWrong = true;
             }
         }
     }

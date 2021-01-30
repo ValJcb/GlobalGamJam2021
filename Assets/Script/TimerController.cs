@@ -9,33 +9,37 @@ public class TimerController : MonoBehaviour
 
     public Text timeCounter1;
     public Text timeCounter2;
-
     private TimeSpan timePlaying;
-    private bool timerGoing;
+    public float elapsedTime;
+    //public ValidationClient valider;
 
-    private float elapsedTime;
 
 
-    private void Start()
+    void Start()
     {
+
         timeCounter1.text = "Time: 00:00.00";
         timeCounter2.text = "Time: 00:00.00";
-        timerGoing = true;
         elapsedTime = 0f;
-        StartCoroutine(UpdateTimer());
     }
 
-    private IEnumerator UpdateTimer()
+    void Update()
     {
-        while (timerGoing)
-        {
+
+
             elapsedTime += Time.deltaTime;
             timePlaying = TimeSpan.FromSeconds(elapsedTime);
             string timePlayingStr = "Time: " + timePlaying.ToString("mm':'ss'.'ff");
             timeCounter1.text = timePlayingStr;
             timeCounter2.text = timePlayingStr;
 
-            yield return null;
-        }
+        //if(valider.isWrong == true)
+        //{
+            //Debug.Log("NTM");
+           // elapsedTime = 0f;
+        //}
+
     }
+
+
 }
