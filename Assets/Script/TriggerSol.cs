@@ -10,6 +10,7 @@ public class TriggerSol : MonoBehaviour
     {
         if (collision.gameObject.tag == "Item_box" | collision.gameObject.tag == "Item")
         {
+            collision.gameObject.tag = "Item";
             collision.gameObject.transform.position = spawner.transform.position;
         }
     }

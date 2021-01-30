@@ -11,20 +11,15 @@ public class Controls : MonoBehaviour
     {
         isDragging = true;
         this.gameObject.tag = "Item";
+        Debug.Log("MouseDown");
 
     }
 
     public void OnMouseUp()
     {
         isDragging = false;
-        StartCoroutine(ChangeTag());
-    }
-    IEnumerator ChangeTag()
-    {
-        yield return new WaitForSeconds(3f);
-        if (isDragging == false) {
-            this.gameObject.tag = "Item_box";
-        }
+        this.gameObject.tag = "Item_box";
+
     }
 
 
