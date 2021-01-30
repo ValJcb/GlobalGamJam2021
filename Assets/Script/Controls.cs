@@ -18,9 +18,21 @@ public class Controls : MonoBehaviour
     public void OnMouseUp()
     {
         isDragging = false;
-        this.gameObject.tag = "Item_box";
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         void FixedUpdate()
