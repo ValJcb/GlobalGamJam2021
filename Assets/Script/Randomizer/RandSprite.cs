@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RadomizerSprite : MonoBehaviour
+public class RandSprite : MonoBehaviour
 
 {
     public float variationSpawn = 1.5f;

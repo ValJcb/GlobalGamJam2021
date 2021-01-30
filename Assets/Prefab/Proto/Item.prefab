@@ -95,9 +95,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2494510329614806746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfb33cc398e46b14a80011b442aba6d9, type: 3}
+  m_Script: {fileID: 11500000, guid: d4164c36e17471b489f5508c12dfbfef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  variationSpawn: 1.5
 --- !u!50 &6361227091346063260
 Rigidbody2D:
   serializedVersion: 4

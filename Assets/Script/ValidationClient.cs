@@ -5,6 +5,7 @@ using UnityEngine;
 public class ValidationClient : MonoBehaviour
 {
     public GameObject objet;
+    private bool isOk = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,18 +17,23 @@ public class ValidationClient : MonoBehaviour
             SpriteRenderer spriteRItem = collision.gameObject.GetComponent<SpriteRenderer>();
             string itemName = spriteRItem.sprite.name;
              
-            Debug.Log(clientWant + "    " + itemName);
-
             if (clientWant == itemName)
             {
-                Destroy(collision.gameObject);
-                Destroy(this.gameObject);
+                isOk = true;
+                //Destroy(collision.gameObject);
+                //Destroy(this.gameObject);
             }
             else
             {
                 //Actions si c'est pas le bon
             }
         }
+    }
+
+    void Update()
+    {
+        if(isOk)
+        this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, new Vector3(-10, 0, 0), Time.deltaTime * 2f);
     }
 
     private void OnBecameInvisible()
