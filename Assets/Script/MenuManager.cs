@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    public PauseMenu paused;
     // Start is called before the first frame update
     private void Start()
     {
@@ -19,5 +20,22 @@ public class MenuManager : MonoBehaviour
     public void Quitter()
     {
         Application.Quit();
+    }
+
+    public void Retry()
+    {
+        paused.isPaused = !paused.isPaused;
+        SceneManager.LoadScene("Main_Scene");
+    }
+
+    public void BackMenu()
+    {
+        paused.isPaused = !paused.isPaused;
+        SceneManager.LoadScene("Main_Menu");
+    }
+
+    public void Resume()
+    {
+        paused.isPaused = !paused.isPaused;
     }
 }
