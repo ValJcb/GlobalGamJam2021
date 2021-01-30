@@ -12,6 +12,7 @@ public class RadomizerSprite : MonoBehaviour
         int rand = Random.Range(0, sprites.Length);
         SpriteRenderer spriteR = GetComponent<SpriteRenderer>();
         spriteR.sprite = sprites[rand];
+        if (gameObject.tag != "Client")
         gameObject.AddComponent<PolygonCollider2D>();
     }
 
