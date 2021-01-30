@@ -994,6 +994,63 @@ PrefabInstance:
       objectReference: {fileID: 1594464708}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ecdd75f448d90a4f8034f7c59c7bc8a, type: 3}
+--- !u!1001 &2522537163544550407
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2522537163750180405, guid: f25f224261a839c48b8a22501728fb95, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522537163750180405, guid: f25f224261a839c48b8a22501728fb95, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522537163750180405, guid: f25f224261a839c48b8a22501728fb95, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522537163750180405, guid: f25f224261a839c48b8a22501728fb95, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522537163750180405, guid: f25f224261a839c48b8a22501728fb95, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522537163750180405, guid: f25f224261a839c48b8a22501728fb95, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522537163750180405, guid: f25f224261a839c48b8a22501728fb95, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522537163750180405, guid: f25f224261a839c48b8a22501728fb95, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522537163750180405, guid: f25f224261a839c48b8a22501728fb95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522537163750180405, guid: f25f224261a839c48b8a22501728fb95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522537163750180405, guid: f25f224261a839c48b8a22501728fb95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522537163750180406, guid: f25f224261a839c48b8a22501728fb95, type: 3}
+      propertyPath: m_Name
+      value: Pieuvre
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f25f224261a839c48b8a22501728fb95, type: 3}
 --- !u!1001 &2913642651327797528
 PrefabInstance:
   m_ObjectHideFlags: 0
