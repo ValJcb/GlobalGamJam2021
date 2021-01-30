@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class TimerController : MonoBehaviour
 {
 
-    public Text timeCounter;
+    public Text timeCounter1;
+    public Text timeCounter2;
 
     private TimeSpan timePlaying;
     private bool timerGoing;
@@ -17,7 +18,8 @@ public class TimerController : MonoBehaviour
 
     private void Start()
     {
-        timeCounter.text = "Time: 00:00.00";
+        timeCounter1.text = "Time: 00:00.00";
+        timeCounter2.text = "Time: 00:00.00";
         timerGoing = true;
         elapsedTime = 0f;
         StartCoroutine(UpdateTimer());
@@ -30,7 +32,8 @@ public class TimerController : MonoBehaviour
             elapsedTime += Time.deltaTime;
             timePlaying = TimeSpan.FromSeconds(elapsedTime);
             string timePlayingStr = "Time: " + timePlaying.ToString("mm':'ss'.'ff");
-            timeCounter.text = timePlayingStr;
+            timeCounter1.text = timePlayingStr;
+            timeCounter2.text = timePlayingStr;
 
             yield return null;
         }

@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public bool isPaused;
+    public BoitePleine gameOver;
 
     private void Start()
     {
@@ -19,15 +20,25 @@ public class PauseMenu : MonoBehaviour
             isPaused = !isPaused;
         }
 
-        if (isPaused)
+        if (isPaused == true && gameOver.isOver == false)
         {
-            pauseMenuUI.SetActive(true);
-            Time.timeScale = 0;
+            ActivateMenu();
         }
-        else
+        else if (isPaused == false && gameOver.isOver == false)
         {
-            pauseMenuUI.SetActive(false);
-            Time.timeScale = 1;
+            DeactiveMenu();
         }
+    }
+
+    void ActivateMenu()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void DeactiveMenu()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1;
     }
 }

@@ -5,19 +5,22 @@ using UnityEngine.UI;
 
 public class BoitePleine : MonoBehaviour
 {
-    public Text perdu;
-    private void Start()
+    public GameObject perdu;
+    public bool isOver;
+
+    private void Start()    
     {
-        perdu.enabled = false;
+        isOver = false;
+        perdu.SetActive(false);
     }
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Item_box")
         {
-            Debug.Log("PERDU");
-
-            perdu.enabled = true;
+            isOver = true;
+            Time.timeScale = 0;
+            perdu.SetActive(true);
         }
     }
 }

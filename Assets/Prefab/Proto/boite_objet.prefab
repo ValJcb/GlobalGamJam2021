@@ -203,4 +203,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c332a4cbf3b5d784cab65b7e59c7eb89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perdu: {fileID: 0}
+  perdu: {fileID: 7598225298827278934, guid: 76a76023f0931b047b17395d4fa55c15, type: 3}

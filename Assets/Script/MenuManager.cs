@@ -24,7 +24,7 @@ public class MenuManager : MonoBehaviour
 
     public void Retry()
     {
-        paused.isPaused = !paused.isPaused;
+        paused.isPaused = false;
         SceneManager.LoadScene("Main_Scene");
     }
 

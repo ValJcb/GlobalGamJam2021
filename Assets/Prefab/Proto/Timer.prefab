@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 797973706536906635}
   - component: {fileID: 7013253649959938404}
   m_Layer: 5
-  m_Name: OverlayCanvas
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e64108b68c20445ae7bc1c33554713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeCounter: {fileID: 797973707445873934}
+  timeCounter1: {fileID: 797973707445873934}
+  timeCounter2: {fileID: 0}
 --- !u!1 &797973707294566954
 GameObject:
   m_ObjectHideFlags: 0
