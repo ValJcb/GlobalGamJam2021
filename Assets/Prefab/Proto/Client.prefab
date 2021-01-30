@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6460088541617838538}
   - component: {fileID: 6460088541617838549}
   - component: {fileID: 6460088541617838539}
+  - component: {fileID: 8590488764749261214}
   m_Layer: 0
   m_Name: Client
   m_TagString: Client
@@ -74,6 +75,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objet: {fileID: 8219102241588116239}
+--- !u!114 &8590488764749261214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460088541617838536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 049f4ef3efbb85b4fa76cd9133a00c3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posClients: {fileID: 5839703980236769280, guid: 1e7e85cac49da6c4487983ee89e3cac4, type: 3}
 --- !u!1 &6460088542171951296
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,7 +98,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6460088542171951299}
   - component: {fileID: 6460088542171951298}
-  - component: {fileID: 6460088542171951309}
   m_Layer: 0
   m_Name: Body
   m_TagString: Client
@@ -157,18 +170,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6460088542171951309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6460088542171951296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 049f4ef3efbb85b4fa76cd9133a00c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6460088542820760921
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,3 +369,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb33cc398e46b14a80011b442aba6d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  variationSpawn: 1.5

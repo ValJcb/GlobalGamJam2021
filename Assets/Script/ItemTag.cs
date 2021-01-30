@@ -11,7 +11,6 @@ public class ItemTag : MonoBehaviour
         if ((collision.gameObject.tag == "Item_box" | collision.gameObject.tag == "Box") && dragg.isDragging == false)
         {
             this.gameObject.tag = "Item_box";
-            Debug.Log("ChangeTag");
         }
     }
 }

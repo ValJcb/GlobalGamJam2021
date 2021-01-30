@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8457264381559749927}
   - component: {fileID: 8457264381559749926}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: SpawnerObjet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000c946b1cfa23f4bb58f5e8431c473b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objets:
-  - {fileID: 855658854430634695, guid: d36c60b0a3fdf1540afad04af24398c3, type: 3}
+  objet: {fileID: 2494510329614806746, guid: feee1a9fe2e86eb438d5d9797acf0d40, type: 3}
   spawner: {fileID: 8457264381559749927}
   spawnRate: 1
