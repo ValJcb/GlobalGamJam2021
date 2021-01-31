@@ -24,7 +24,7 @@ public class ValidationClient : MonoBehaviour
             SpriteRenderer spriteRItem = collision.gameObject.GetComponent<SpriteRenderer>();
             string itemName = spriteRItem.sprite.name;
              
-            if (clientWant != itemName)
+            if (clientWant == itemName)
             {
                 audioSource.PlayOneShot(sonValidation);
                 audioSource.PlayOneShot(voix);
