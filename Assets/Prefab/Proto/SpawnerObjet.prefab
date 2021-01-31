@@ -45,4 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objet: {fileID: 2494510329614806746, guid: feee1a9fe2e86eb438d5d9797acf0d40, type: 3}
   spawner: {fileID: 8457264381559749927}
-  spawnRate: 1
+  spawnRate: 2

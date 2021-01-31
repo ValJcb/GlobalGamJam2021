@@ -158,6 +158,7 @@ MonoBehaviour:
   voix: {fileID: 8300000, guid: 27ca2f0fd83314bda97d329c51254438, type: 3}
   voixClientsValide: []
   voixClientsErreur: []
+  oofAnim: {fileID: 6116685050326391258, guid: 87d3197ee9870e146b00b8329377cc97, type: 3}
   wrongLength: 0.5
   wrongTime: 0
   clicLength: 0.1

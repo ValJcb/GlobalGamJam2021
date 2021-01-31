@@ -10,6 +10,7 @@ TagManager:
   - Item_box
   - FinFile
   - Item_cursed
+  - error
   layers:
   - Default
   - TransparentFX

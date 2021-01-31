@@ -23,6 +23,7 @@ public class ValidationClient : MonoBehaviour
 
     void Start()
     {
+        
         voixClientsValide = Resources.LoadAll<AudioClip>("VoixValide") as AudioClip[];
         voixClientsErreur = Resources.LoadAll<AudioClip>("VoixErreur") as AudioClip[];
     }
@@ -53,6 +54,7 @@ public class ValidationClient : MonoBehaviour
             }
             else
             {
+                
                 Debug.Log(collision.gameObject.tag);
                 GameObject.Find("Timer").GetComponent<TimerController>().elapsedTime -= 10f;
                 audioSource.PlayOneShot(sonEchec);
