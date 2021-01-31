@@ -7,6 +7,7 @@ public class ValidationClient : MonoBehaviour
     public GameObject objet;
     public GameObject bubble;
     public GameObject detector;
+    public GameObject body;
     public Rigidbody2D rb;
 
     public void OnTriggerStay2D(Collider2D collision)
@@ -25,6 +26,7 @@ public class ValidationClient : MonoBehaviour
                 Destroy(bubble);
                 Destroy(objet);
                 Destroy(detector);
+                body.GetComponent<SpriteRenderer>().flipX = true;
                 //Destroy(this.gameObject);
                 Destroy(this.gameObject.GetComponent<Collider2D>());
                 rb.velocity = new Vector2(-2, 0);
