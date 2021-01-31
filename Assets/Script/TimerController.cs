@@ -29,7 +29,10 @@ public class TimerController : MonoBehaviour
             string timePlayingStr = "Time: " + timePlaying.ToString("mm':'ss'.'ff");
             timeCounter1.text = timePlayingStr;
             timeCounter2.text = timePlayingStr;
-
+        if(elapsedTime < 0f)
+        {
+            elapsedTime = 0f;
+        }
     }
 
 
