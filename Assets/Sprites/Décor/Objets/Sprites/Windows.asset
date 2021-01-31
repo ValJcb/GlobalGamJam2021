@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Barrel
+  m_Name: Windows
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 6c0664b141e9848e0914c036ba55ea41, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c311ff75d6054a22b3797840ffb09b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
