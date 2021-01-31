@@ -155,6 +155,7 @@ MonoBehaviour:
   audioSource: {fileID: 2894597131052280172}
   sonValidation: {fileID: 8300000, guid: fa619472a6d1f4c20b3ddb73f6d2d63e, type: 3}
   sonEchec: {fileID: 8300000, guid: 7e378a1edda3d48af92404e80fa3dd3c, type: 3}
+  voix: {fileID: 8300000, guid: 27ca2f0fd83314bda97d329c51254438, type: 3}
 --- !u!50 &6875633634792514229
 Rigidbody2D:
   serializedVersion: 4
@@ -185,7 +186,7 @@ AudioSource:
   m_GameObject: {fileID: 6460088541617838536}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 187972712413385950, guid: dafa8f3ff5b6c59458c8274a06f3a032, type: 2}
+  OutputAudioMixerGroup: {fileID: 187972712413385950, guid: 52ee6f113776248708d2a65c6456ca28, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

@@ -12,6 +12,7 @@ public class ValidationClient : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip sonValidation;
     public AudioClip sonEchec;
+    public AudioClip voix;
 
     public void OnTriggerStay2D(Collider2D collision)
     {
@@ -23,9 +24,10 @@ public class ValidationClient : MonoBehaviour
             SpriteRenderer spriteRItem = collision.gameObject.GetComponent<SpriteRenderer>();
             string itemName = spriteRItem.sprite.name;
              
-            if (clientWant == itemName)
+            if (clientWant != itemName)
             {
                 audioSource.PlayOneShot(sonValidation);
+                audioSource.PlayOneShot(voix);
                 Destroy(collision.gameObject);
                 Destroy(bubble);
                 Destroy(objet);
@@ -39,6 +41,7 @@ public class ValidationClient : MonoBehaviour
             {
                 GameObject.Find("Timer").GetComponent<TimerController>().elapsedTime -= 10f;
                 audioSource.PlayOneShot(sonEchec);
+                audioSource.PlayOneShot(voix);
                 collision.gameObject.tag = "Item_cursed";
                 GameObject.Find("Main Camera").SendMessage("DoShake");
                 Debug.Log(collision.gameObject.tag);
