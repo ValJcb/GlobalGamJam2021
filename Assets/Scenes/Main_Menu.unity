@@ -347,11 +347,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 711e0b8682a5b2244817750f24c41faa, type: 3}
-    m_FontSize: 19
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 44
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -401,8 +401,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 43}
-  m_SizeDelta: {x: 830.9, y: 124.1}
+  m_AnchoredPosition: {x: 0, y: 175}
+  m_SizeDelta: {x: 910.44, y: 124.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &514669519
 MonoBehaviour:
@@ -426,7 +426,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 711e0b8682a5b2244817750f24c41faa, type: 3}
-    m_FontSize: 22
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -694,8 +694,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -468}
+  m_SizeDelta: {x: 332.8, y: 70.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &827268689
 MonoBehaviour:
@@ -897,6 +897,7 @@ GameObject:
   - component: {fileID: 953159068}
   - component: {fileID: 953159071}
   - component: {fileID: 953159072}
+  - component: {fileID: 953159073}
   m_Layer: 8
   m_Name: Squid_face
   m_TagString: Untagged
@@ -1086,6 +1087,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionAnim: {fileID: 2034393911}
+--- !u!95 &953159073
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953159065}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e28aea410bbbcfe448585f25d877f222, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1409143330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,6 +1354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: {fileID: 0}
+  transitionAnim: {fileID: 0}
 --- !u!114 &1833494369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1363,10 +1384,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1450,8 +1471,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 146}
-  m_SizeDelta: {x: 830.9, y: 124.1}
+  m_AnchoredPosition: {x: 0, y: 392}
+  m_SizeDelta: {x: 1185.96, y: 124.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1972482367
 MonoBehaviour:
@@ -1475,11 +1496,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 711e0b8682a5b2244817750f24c41faa, type: 3}
-    m_FontSize: 86
+    m_FontSize: 153
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 106
+    m_MaxSize: 196
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
