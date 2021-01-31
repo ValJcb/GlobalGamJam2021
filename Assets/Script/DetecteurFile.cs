@@ -2,33 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClientPositionning : MonoBehaviour
+public class DetecteurFile : MonoBehaviour
 {
-    //public GameObject client;
-    public Rigidbody2D rb;
-    public bool touchedLeBout = false;
+    public bool haveToMove = true;
+    private Rigidbody2D rb;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = new Vector2(2, 0);
+        rb = GetComponentInParent<Rigidbody2D>();
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "FinFile" || other.gameObject.tag == "Client")
+            haveToMove = true;
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.gameObject.tag == "FinFile" || collision.gameObject.tag == "Client")
         {
-            touchedLeBout = true;
+            haveToMove = false;
             rb.velocity = new Vector2(0, 0);
+
         }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!touchedLeBout)
-        rb.velocity = new Vector2(2, 0);
-
+        if (haveToMove)
+            rb.velocity = new Vector2(2, 0);
     }
 }
