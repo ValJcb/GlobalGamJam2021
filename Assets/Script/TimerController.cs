@@ -11,9 +11,6 @@ public class TimerController : MonoBehaviour
     public Text timeCounter2;
     private TimeSpan timePlaying;
     public float elapsedTime;
-    //public ValidationClient valider;
-
-
 
     void Start()
     {
@@ -32,12 +29,6 @@ public class TimerController : MonoBehaviour
             string timePlayingStr = "Time: " + timePlaying.ToString("mm':'ss'.'ff");
             timeCounter1.text = timePlayingStr;
             timeCounter2.text = timePlayingStr;
-
-        //if(valider.isWrong == true)
-        //{
-            //Debug.Log("NTM");
-           // elapsedTime = 0f;
-        //}
 
     }
 

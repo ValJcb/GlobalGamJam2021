@@ -339,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5918755465425977722, guid: 3585b7b548d34af4da56ed506d28b427, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5918755465425977722, guid: 3585b7b548d34af4da56ed506d28b427, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -359,6 +359,11 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7598225298827278934, guid: 76a76023f0931b047b17395d4fa55c15, type: 3}
   m_PrefabInstance: {fileID: 6307162281711574089}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &344779814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 797973707445873923, guid: ec99a80430b49034cb2e1ac4827e989d, type: 3}
+  m_PrefabInstance: {fileID: 1936797612}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &527110481 stripped
 Animator:
@@ -406,7 +411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8550108890340638462, guid: 90a4513c0f8f56d4c9c0ff7cef3b6190, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8550108890340638462, guid: 90a4513c0f8f56d4c9c0ff7cef3b6190, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -473,6 +478,10 @@ PrefabInstance:
       propertyPath: perdu
       value: 
       objectReference: {fileID: 325745061}
+    - target: {fileID: 7090345904820113233, guid: 4565f55cec6d2e4468cf24bed10fb3c2, type: 3}
+      propertyPath: otherTimer
+      value: 
+      objectReference: {fileID: 344779814}
     - target: {fileID: 7090345904820113234, guid: 4565f55cec6d2e4468cf24bed10fb3c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.8
@@ -693,7 +702,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &815225575
 PrefabInstance:
@@ -923,18 +932,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1280087159}
-    - target: {fileID: 2913642651363474647, guid: d938b54a2bbb96b43b621cea2e6a804a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Retry
-      objectReference: {fileID: 0}
     - target: {fileID: 2913642651516546302, guid: d938b54a2bbb96b43b621cea2e6a804a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1280087159}
-    - target: {fileID: 2913642651516546302, guid: d938b54a2bbb96b43b621cea2e6a804a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BackMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 2913642651721037729, guid: d938b54a2bbb96b43b621cea2e6a804a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1027,10 +1028,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1280087159}
-    - target: {fileID: 2913642651795414716, guid: d938b54a2bbb96b43b621cea2e6a804a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Resume
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d938b54a2bbb96b43b621cea2e6a804a, type: 3}
 --- !u!1 &1704540682 stripped
@@ -1079,7 +1076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6460088541617838538, guid: bdcac10f637ee3c4685f53dd7fa4afb1, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6460088541617838538, guid: bdcac10f637ee3c4685f53dd7fa4afb1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1214,10 +1211,6 @@ PrefabInstance:
     - target: {fileID: 7598225298827278934, guid: 76a76023f0931b047b17395d4fa55c15, type: 3}
       propertyPath: m_Name
       value: GameOver
-      objectReference: {fileID: 0}
-    - target: {fileID: 7598225298827278934, guid: 76a76023f0931b047b17395d4fa55c15, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7598225298827278938, guid: 76a76023f0931b047b17395d4fa55c15, type: 3}
       propertyPath: m_LocalPosition.x

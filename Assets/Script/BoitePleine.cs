@@ -7,6 +7,7 @@ public class BoitePleine : MonoBehaviour
 {
     public GameObject perdu;
     public bool isOver;
+    public GameObject otherTimer;
 
     private void Start()    
     {
@@ -16,11 +17,12 @@ public class BoitePleine : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Item_box")
+        if (collision.gameObject.tag == "Item_box" && isOver == false)
         {
             isOver = true;
             Time.timeScale = 0;
             perdu.SetActive(true);
+            otherTimer.SetActive(false);
         }
     }
 }
