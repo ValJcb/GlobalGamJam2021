@@ -48,8 +48,8 @@ public class ShakeCamera : MonoBehaviour
         OriginalPos = transform.position;
         OriginalRot = transform.rotation;
 
-        ShakeIntensity = 0.1f;
-        ShakeDecay = 0.02f;
+        ShakeIntensity = 0.05f;
+        ShakeDecay = 0.01f;
         Shaking = true;
     }
 }

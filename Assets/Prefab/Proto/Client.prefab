@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 6460088541617838549}
   - component: {fileID: 6460088541617838539}
   - component: {fileID: 6875633634792514229}
-  - component: {fileID: 8405229304797468803}
+  - component: {fileID: 2894597131052280172}
   m_Layer: 0
   m_Name: Client
   m_TagString: Client
@@ -152,6 +152,9 @@ MonoBehaviour:
   detector: {fileID: 6189842042245108830}
   body: {fileID: 6460088542171951296}
   rb: {fileID: 6875633634792514229}
+  audioSource: {fileID: 2894597131052280172}
+  sonValidation: {fileID: 8300000, guid: fa619472a6d1f4c20b3ddb73f6d2d63e, type: 3}
+  sonEchec: {fileID: 8300000, guid: 7e378a1edda3d48af92404e80fa3dd3c, type: 3}
 --- !u!50 &6875633634792514229
 Rigidbody2D:
   serializedVersion: 4
@@ -173,7 +176,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!82 &8405229304797468803
+--- !u!82 &2894597131052280172
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,7 +185,7 @@ AudioSource:
   m_GameObject: {fileID: 6460088541617838536}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 187972712413385950, guid: dafa8f3ff5b6c59458c8274a06f3a032, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
