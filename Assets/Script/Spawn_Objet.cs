@@ -7,21 +7,31 @@ public class Spawn_Objet : MonoBehaviour
     public GameObject objet;
 
     public Transform spawner;
-    public float spawnRate = 1;
-    // Start is called before the first frame update
-    void Start()
-    {
-        InvokeRepeating("SpawnMethod", 1.0f, spawnRate);
-    }
 
-    void SpawnMethod()
-    {
-        Instantiate(objet, spawner);
-    }
-    // Update is called once per frame
+
+    public float timeoutDuration = 2;
+
+    private float timeout = 2;
+    public float multiply = 0.995f;
+    public float limit = 0.3f;
+
     void Update()
     {
+        Debug.Log(timeoutDuration);
 
+        if (timeout > 0)
+        {
+            timeout -= Time.deltaTime;
+            return;
+        }
+
+        Instantiate(objet, spawner);
+
+        timeout = timeoutDuration;
+
+        if(timeoutDuration>limit)
+            timeoutDuration = timeoutDuration * multiply;
 
     }
+
 } 
