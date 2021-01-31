@@ -53,6 +53,7 @@ public class ValidationClient : MonoBehaviour
             }
             else
             {
+                Debug.Log(collision.gameObject.tag);
                 GameObject.Find("Timer").GetComponent<TimerController>().elapsedTime -= 10f;
                 audioSource.PlayOneShot(sonEchec);
                 int rand = Random.Range(0, voixClientsErreur.Length);
