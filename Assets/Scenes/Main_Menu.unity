@@ -1380,6 +1380,14 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8550108890496499052, guid: 90a4513c0f8f56d4c9c0ff7cef3b6190, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8550108890496499052, guid: 90a4513c0f8f56d4c9c0ff7cef3b6190, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90a4513c0f8f56d4c9c0ff7cef3b6190, type: 3}
 --- !u!1 &1574477638
@@ -1593,7 +1601,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 711e0b8682a5b2244817750f24c41faa, type: 3}
-    m_FontSize: 153
+    m_FontSize: 133
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1604,7 +1612,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lost and Found
+  m_Text: Tommy the Finder
 --- !u!222 &1972482368
 CanvasRenderer:
   m_ObjectHideFlags: 0
