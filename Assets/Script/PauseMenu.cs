@@ -28,7 +28,11 @@ public class PauseMenu : MonoBehaviour
         {
             DeactiveMenu();
         }
+
+
     }
+
+
 
     void ActivateMenu()
     {

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SquidMenu : MonoBehaviour
 {
+    public Animator transitionAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,9 @@ public class SquidMenu : MonoBehaviour
 
     IEnumerator LoadScene()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
+        transitionAnim.SetTrigger("endtrans");
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Main_Scene");
     }
 }
