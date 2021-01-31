@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SquidMenu : MonoBehaviour
+public class TutoManager : MonoBehaviour
 {
     public Animator transitionAnim;
     // Start is called before the first frame update
@@ -15,13 +15,7 @@ public class SquidMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Item")
+        if (Input.GetKey(KeyCode.Space))
         {
             StartCoroutine(LoadScene());
         }
@@ -32,6 +26,8 @@ public class SquidMenu : MonoBehaviour
         yield return new WaitForSeconds(1f);
         transitionAnim.SetTrigger("endtrans");
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Tuto_Scene");
+        SceneManager.LoadScene("Main_Scene");
     }
+
+
 }

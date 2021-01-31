@@ -156,6 +156,11 @@ MonoBehaviour:
   sonValidation: {fileID: 8300000, guid: fa619472a6d1f4c20b3ddb73f6d2d63e, type: 3}
   sonEchec: {fileID: 8300000, guid: 7e378a1edda3d48af92404e80fa3dd3c, type: 3}
   voix: {fileID: 8300000, guid: 27ca2f0fd83314bda97d329c51254438, type: 3}
+  voixClientsValide: []
+  voixClientsErreur: []
+  wrongLength: 0.5
+  wrongTime: 0
+  clicLength: 0.1
 --- !u!50 &6875633634792514229
 Rigidbody2D:
   serializedVersion: 4
