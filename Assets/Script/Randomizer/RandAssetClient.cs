@@ -9,10 +9,9 @@ public class RandAssetClient : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Sprite[] spritesPeople = Resources.LoadAll<Sprite>("People") as Sprite[];
-        int rand = Random.Range(0, spritesPeople.Length);
+        int rand = Random.Range(0, GameManager.spritesClients.Length);
         SpriteRenderer spriteR = GetComponent<SpriteRenderer>();
-        spriteR.sprite = spritesPeople[rand];
+        spriteR.sprite = GameManager.spritesClients[rand];
     }
 
     // Update is called once per frame

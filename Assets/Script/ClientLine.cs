@@ -11,13 +11,20 @@ public class ClientLine : MonoBehaviour
     public float spawnRate = 1;
     public bool canPop = true;
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
+        //Start the coroutine we define below named ExampleCoroutine.
+        StartCoroutine(ExampleCoroutine());
+    }
+
+    IEnumerator ExampleCoroutine()
+    {
+        Debug.Log("merde");
+        yield return new WaitForSeconds(3);
+
         InvokeRepeating("SpawnMethod", 1.0f, spawnRate);
     }
+
 
     void SpawnMethod()
     {

@@ -24,7 +24,7 @@ public class ValidationClient : MonoBehaviour
     public float spawnT;
 
     //private float clicCounter;
-    public float clicLength = 0.1f;
+    //public float clicLength = 0.1f;
 
     public Animator oofAnim;
 

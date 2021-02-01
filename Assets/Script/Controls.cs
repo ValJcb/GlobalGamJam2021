@@ -11,7 +11,7 @@ public class Controls : MonoBehaviour
     {
         isDragging = true;
         this.gameObject.tag = "Item";
-        Debug.Log("MouseDown");
+        //Debug.Log("MouseDown");
 
     }
 
@@ -20,20 +20,6 @@ public class Controls : MonoBehaviour
         isDragging = false;
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         void Update()
     {
