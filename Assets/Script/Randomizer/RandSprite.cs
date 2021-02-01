@@ -32,7 +32,7 @@ public class RandSprite : MonoBehaviour
             int hors = Random.Range(0, chanceHors);
 
 
-            if (hors < 7) {
+            if (hors < 10) {
                 GameObject[] allItem = GameObject.FindGameObjectsWithTag("Item_box");
                 if (allItem.Length == 0)
                 {

@@ -17,9 +17,11 @@ public class ValidationClient : MonoBehaviour
     public AudioClip[] voixClientsErreur;
 
     public float wrongLength = 3f;
-    public float wrongTime;
+    public float wrongTime =0f;
     private float clicCounter;
     public float clicLength = 0.1f;
+
+    public Animator oofAnim;
 
     void Start()
     {
@@ -52,9 +54,10 @@ public class ValidationClient : MonoBehaviour
                 Destroy(this.gameObject.GetComponent<Collider2D>());
                 rb.velocity = new Vector2(-2, 0);
             }
-            else
+            if (clientWant != itemName && wrongTime <= 0)
             {
-                
+
+                oofAnim.SetTrigger("oof");
                 Debug.Log(collision.gameObject.tag);
                 GameObject.Find("Timer").GetComponent<TimerController>().elapsedTime -= 10f;
                 audioSource.PlayOneShot(sonEchec);
@@ -90,6 +93,7 @@ public class ValidationClient : MonoBehaviour
             }
         }
     }
+
 
     private void OnBecameInvisible()
     {

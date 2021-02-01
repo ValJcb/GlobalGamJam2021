@@ -35,10 +35,12 @@ public class Controls : MonoBehaviour
 
 
 
-        void FixedUpdate()
+        void Update()
     {
         if (isDragging)
         {
+            //rb.position
+            //this.gameObject.transform.position
             rb.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
         }
     }

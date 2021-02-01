@@ -7,6 +7,7 @@ public class MenuManager : MonoBehaviour
 {
     public PauseMenu paused;
     public Animator transitionAnim;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -35,6 +36,7 @@ public class MenuManager : MonoBehaviour
 
     public void Resume()
     {
+        
         paused.isPaused = !paused.isPaused;
     }
 

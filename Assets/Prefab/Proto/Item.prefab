@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variationSpawn: 1.5
+  chanceHors: 10
 --- !u!50 &6361227091346063260
 Rigidbody2D:
   serializedVersion: 4

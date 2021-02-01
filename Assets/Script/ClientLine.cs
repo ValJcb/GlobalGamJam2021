@@ -45,6 +45,7 @@ public class ClientLine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        spawnRate = spawnRate * 0.99995f;
         
     }
 }
