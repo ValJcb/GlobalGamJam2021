@@ -16,18 +16,23 @@ public class ValidationClient : MonoBehaviour
     public AudioClip[] voixClientsValide;
     public AudioClip[] voixClientsErreur;
 
-    public float wrongLength = 3f;
-    public float wrongTime =0f;
-    private float clicCounter;
+    //public float wrongLength = 3f;
+    //public float wrongTime = 0f;
+
+    public int patience = 30;
+    private bool isWaiting = true;
+    public float spawnT;
+
+    //private float clicCounter;
     public float clicLength = 0.1f;
 
     public Animator oofAnim;
 
     void Start()
     {
-        
         voixClientsValide = Resources.LoadAll<AudioClip>("VoixValide") as AudioClip[];
         voixClientsErreur = Resources.LoadAll<AudioClip>("VoixErreur") as AudioClip[];
+        spawnT = Time.time;
     }
 
     public void OnTriggerStay2D(Collider2D collision)
@@ -41,41 +46,70 @@ public class ValidationClient : MonoBehaviour
             string itemName = spriteRItem.sprite.name;
              
             if (clientWant == itemName)
-            {
-                audioSource.PlayOneShot(sonValidation);
-                int rand = Random.Range(0, voixClientsValide.Length);
-                audioSource.PlayOneShot(voixClientsValide[rand]);
-                Destroy(collision.gameObject);
-                Destroy(bubble);
-                Destroy(objet);
-                Destroy(detector);
-                body.GetComponent<SpriteRenderer>().flipX = true;
-                //Destroy(this.gameObject);
-                Destroy(this.gameObject.GetComponent<Collider2D>());
-                rb.velocity = new Vector2(-2, 0);
-            }
-            if (clientWant != itemName && wrongTime <= 0)
-            {
-
-                oofAnim.SetTrigger("oof");
-                Debug.Log(collision.gameObject.tag);
-                GameObject.Find("Timer").GetComponent<TimerController>().elapsedTime -= 10f;
-                audioSource.PlayOneShot(sonEchec);
-                int rand = Random.Range(0, voixClientsErreur.Length);
-                audioSource.PlayOneShot(voixClientsErreur[rand]);
-                DoRed();
-                collision.gameObject.tag = "Item_cursed";
-                GameObject.Find("Main Camera").SendMessage("DoShake");
-                Debug.Log(collision.gameObject.tag);
-                //isWrong = true;
-            }
+                success(collision);
+ 
+            if (clientWant != itemName)
+                badItem(collision);
         }
     }
 
+    void success(Collider2D collision)
+    {
+        audioSource.PlayOneShot(sonValidation);
+        int rand = Random.Range(0, voixClientsValide.Length);
+        audioSource.PlayOneShot(voixClientsValide[rand]);
+        Destroy(collision.gameObject);
+        leave();
+    }
 
+    void badItem(Collider2D collision)
+    {
+        collision.gameObject.tag = "Item_cursed";
+        nrv(true);
+    }
+
+    void nrv(bool shake)
+    {
+        oofAnim.SetTrigger("oof");
+        GameObject.Find("Timer").GetComponent<TimerController>().elapsedTime -= 10f;
+        audioSource.PlayOneShot(sonEchec);
+        int rand = Random.Range(0, voixClientsErreur.Length);
+        audioSource.PlayOneShot(voixClientsErreur[rand]);
+        if(shake)
+            GameObject.Find("Main Camera").SendMessage("DoShake");
+    }
+
+    void leave()
+    {
+        isWaiting = false;
+        Destroy(bubble);
+        Destroy(objet);
+        Destroy(detector);
+        Destroy(this.GetComponent<Collider2D>());
+        body.GetComponent<SpriteRenderer>().flipX = true;
+        rb.velocity = new Vector2(-2, 0);
+    }
+    void tooLong()
+    {
+        nrv(false);
+        leave();
+        patience = 600;
+    }
 
     void Update()
     {
+
+        if(Time.time - spawnT > patience && isWaiting)
+        {
+            tooLong();
+        }
+
+        if(transform.position.x < -11)
+        {
+            Destroy(this.gameObject);
+        }
+
+        /*
         if (wrongTime > 0)
         {
             wrongTime -= Time.deltaTime;
@@ -91,18 +125,13 @@ public class ValidationClient : MonoBehaviour
             {
                 body.active = true;
             }
-        }
+        }*/
     }
 
-
-    private void OnBecameInvisible()
-    {
-        Destroy(this.gameObject);
-        Debug.Log("Ciao");
-    }
-
+    /*
     public void DoRed()
     {
         wrongTime = wrongLength;
     }
+    */
 }

@@ -7,7 +7,6 @@ public class DetecteurFile : MonoBehaviour
     public bool haveToMove = true;
     private Rigidbody2D rb;
 
-
     // Start is called before the first frame update
     void Start()
     {

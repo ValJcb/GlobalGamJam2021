@@ -17,7 +17,7 @@ public class Spawn_Objet : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(timeoutDuration);
+        //Debug.Log(timeoutDuration);
 
         if (timeout > 0)
         {

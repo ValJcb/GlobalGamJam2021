@@ -6,7 +6,8 @@ public class RandSprite : MonoBehaviour
 
 {
     public float variationSpawn = 1.5f;
-    public int chanceHors = 10;
+    private int chanceHors = 10;
+    public int chancePresentSur10 = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +33,10 @@ public class RandSprite : MonoBehaviour
             int hors = Random.Range(0, chanceHors);
 
 
-            if (hors < 10) {
+            if (hors < chancePresentSur10) {
                 GameObject[] allItem = GameObject.FindGameObjectsWithTag("Item_box");
                 if (allItem.Length == 0)
                 {
-
                     Sprite[] sprites = Resources.LoadAll<Sprite>("Objets") as Sprite[];
                     int rand2 = Random.Range(0, sprites.Length);
                     SpriteRenderer spriteR2 = GetComponent<SpriteRenderer>();

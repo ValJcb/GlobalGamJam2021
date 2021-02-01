@@ -260,6 +260,8 @@ MonoBehaviour:
   voixClientsErreur: []
   wrongLength: 0.5
   wrongTime: 0
+  patience: 10
+  spawnT: 0
   clicLength: 0.1
   oofAnim: {fileID: 3966597056359820345}
 --- !u!50 &6875633634792514229
@@ -652,7 +654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variationSpawn: 1.5
-  chanceHors: 10
+  chancePresentSur10: 10
 --- !u!1001 &7200969540112119267
 PrefabInstance:
   m_ObjectHideFlags: 0
