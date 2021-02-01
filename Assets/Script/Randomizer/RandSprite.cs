@@ -6,11 +6,12 @@ public class RandSprite : MonoBehaviour
 
 {
     public float variationSpawn = 1.5f;
-    public int chancePresentSur10 = 10;
+    private int chancePresent;
 
     // Start is called before the first frame update
     void Start()
     {
+
 
         if (gameObject.tag == "Item")
         {
@@ -22,12 +23,14 @@ public class RandSprite : MonoBehaviour
 
         if (gameObject.tag == "Client")
         {
-            int hors = Random.Range(0, 10);
+            int hors = Random.Range(0, 100);
+            chancePresent = GameObject.Find("ClientLine").GetComponent<ClientLine>().chanceExisting;
 
-            if (hors < chancePresentSur10) {
+            if (hors < chancePresent) {
                 GameObject[] allItem = GameObject.FindGameObjectsWithTag("Item_box");
                 if (allItem.Length == 0)
                 {
+                    Debug.Log("Spawn random car pas d'objet");
                     spawnRandomItem();
                 }
                 else

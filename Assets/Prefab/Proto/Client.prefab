@@ -258,11 +258,8 @@ MonoBehaviour:
   voix: {fileID: 8300000, guid: 27ca2f0fd83314bda97d329c51254438, type: 3}
   voixClientsValide: []
   voixClientsErreur: []
-  wrongLength: 0.5
-  wrongTime: 0
-  patience: 10
+  patience: 30
   spawnT: 0
-  clicLength: 0.1
   oofAnim: {fileID: 3966597056359820345}
 --- !u!50 &6875633634792514229
 Rigidbody2D:
@@ -654,7 +651,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variationSpawn: 1.5
-  chancePresentSur10: 10
 --- !u!1001 &7200969540112119267
 PrefabInstance:
   m_ObjectHideFlags: 0

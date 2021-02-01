@@ -8,29 +8,36 @@ public class ClientLine : MonoBehaviour
 
     public Transform spawner;
     public BoxCollider2D colliderSpawn;
-    public float spawnRate = 1;
-    public bool canPop = true;
+    public bool canPop;
+    public int chanceExisting = 100;
+
+
+    public float waitTillSpawn = 3.7f;
+
+    private float timeout = 2;
+    public float multiply = 0.995f;
+    public float limit = 0.3f;
+
 
     void Start()
     {
-        //Start the coroutine we define below named ExampleCoroutine.
-        StartCoroutine(ExampleCoroutine());
+        canPop = false;
+        StartCoroutine(WaitCoroutine());
     }
 
-    IEnumerator ExampleCoroutine()
+    IEnumerator WaitCoroutine()
     {
-        Debug.Log("merde");
-        yield return new WaitForSeconds(3);
-
-        InvokeRepeating("SpawnMethod", 1.0f, spawnRate);
+        yield return new WaitForSeconds(3);    
+        canPop = true;
     }
 
 
     void SpawnMethod()
     {
-        if(canPop)
+        if(canPop == true)
             Instantiate(objet, spawner);
     }
+
 
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -41,18 +48,23 @@ public class ClientLine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.tag == "Client")
-        {
             canPop = false;
-        }
-
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        spawnRate = spawnRate * 0.99995f;
+        if (timeout > 0)
+        {
+            timeout -= Time.deltaTime;
+            return;
+        }
+        SpawnMethod();
+        timeout = waitTillSpawn;
+        if (waitTillSpawn > limit)
+            waitTillSpawn = waitTillSpawn * multiply;
+    }
         
     }
-}
+

@@ -9,7 +9,7 @@ public class Spawn_Objet : MonoBehaviour
     public Transform spawner;
 
 
-    public float timeoutDuration = 2;
+    public float waitTillSpawn = 2;
 
     private float timeout = 2;
     public float multiply = 0.995f;
@@ -17,7 +17,6 @@ public class Spawn_Objet : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(timeoutDuration);
 
         if (timeout > 0)
         {
@@ -27,10 +26,10 @@ public class Spawn_Objet : MonoBehaviour
 
         Instantiate(objet, spawner);
 
-        timeout = timeoutDuration;
+        timeout = waitTillSpawn;
 
-        if(timeoutDuration>limit)
-            timeoutDuration = timeoutDuration * multiply;
+        if(waitTillSpawn > limit)
+            waitTillSpawn = waitTillSpawn * multiply;
 
     }
 
